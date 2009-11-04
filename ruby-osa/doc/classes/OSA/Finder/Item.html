@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: OSA::Finder::Item</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">OSA::Finder::Item</td>
+        </tr>
+<!--
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/tmp/Finder-0-92443_rb.html">
+                /tmp/Finder-0-92443.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+-->
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                OSA::Element
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Every item.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000284">bounds</a>&nbsp;&nbsp;
+      <a href="#M000285">bounds=</a>&nbsp;&nbsp;
+      <a href="#M000246">class2</a>&nbsp;&nbsp;
+      <a href="#M000276">comment</a>&nbsp;&nbsp;
+      <a href="#M000277">comment=</a>&nbsp;&nbsp;
+      <a href="#M000245">container</a>&nbsp;&nbsp;
+      <a href="#M000259">creation_date</a>&nbsp;&nbsp;
+      <a href="#M000261">description</a>&nbsp;&nbsp;
+      <a href="#M000262">desktop_position</a>&nbsp;&nbsp;
+      <a href="#M000263">desktop_position=</a>&nbsp;&nbsp;
+      <a href="#M000266">disk</a>&nbsp;&nbsp;
+      <a href="#M000286">displayed_name</a>&nbsp;&nbsp;
+      <a href="#M000270">everyones_privileges</a>&nbsp;&nbsp;
+      <a href="#M000271">everyones_privileges=</a>&nbsp;&nbsp;
+      <a href="#M000241">extension_hidden=</a>&nbsp;&nbsp;
+      <a href="#M000240">extension_hidden?</a>&nbsp;&nbsp;
+      <a href="#M000274">group</a>&nbsp;&nbsp;
+      <a href="#M000275">group=</a>&nbsp;&nbsp;
+      <a href="#M000248">group_privileges</a>&nbsp;&nbsp;
+      <a href="#M000249">group_privileges=</a>&nbsp;&nbsp;
+      <a href="#M000250">icon</a>&nbsp;&nbsp;
+      <a href="#M000251">icon=</a>&nbsp;&nbsp;
+      <a href="#M000260">id2</a>&nbsp;&nbsp;
+      <a href="#M000267">index</a>&nbsp;&nbsp;
+      <a href="#M000255">information_window</a>&nbsp;&nbsp;
+      <a href="#M000247">kind</a>&nbsp;&nbsp;
+      <a href="#M000282">label_index</a>&nbsp;&nbsp;
+      <a href="#M000283">label_index=</a>&nbsp;&nbsp;
+      <a href="#M000281">locked=</a>&nbsp;&nbsp;
+      <a href="#M000280">locked?</a>&nbsp;&nbsp;
+      <a href="#M000264">modification_date</a>&nbsp;&nbsp;
+      <a href="#M000265">modification_date=</a>&nbsp;&nbsp;
+      <a href="#M000242">name</a>&nbsp;&nbsp;
+      <a href="#M000243">name=</a>&nbsp;&nbsp;
+      <a href="#M000253">name_extension</a>&nbsp;&nbsp;
+      <a href="#M000254">name_extension=</a>&nbsp;&nbsp;
+      <a href="#M000272">owner</a>&nbsp;&nbsp;
+      <a href="#M000273">owner=</a>&nbsp;&nbsp;
+      <a href="#M000256">owner_privileges</a>&nbsp;&nbsp;
+      <a href="#M000257">owner_privileges=</a>&nbsp;&nbsp;
+      <a href="#M000252">physical_size</a>&nbsp;&nbsp;
+      <a href="#M000278">position</a>&nbsp;&nbsp;
+      <a href="#M000279">position=</a>&nbsp;&nbsp;
+      <a href="#M000268">properties</a>&nbsp;&nbsp;
+      <a href="#M000269">properties=</a>&nbsp;&nbsp;
+      <a href="#M000244">size</a>&nbsp;&nbsp;
+      <a href="#M000258">url</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000284" class="method-detail">
+        <a name="M000284"></a>
+
+        <div class="method-heading">
+          <span class="method-name">bounds<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000284">bounds</a> property &#8212; the
+bounding rectangle of the item (can only be set for an item in a window
+viewed as icons or buttons).
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as rectangle.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000285" class="method-detail">
+        <a name="M000285"></a>
+
+        <div class="method-heading">
+          <span class="method-name">bounds=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000284">bounds</a> property &#8212; the
+bounding rectangle of the item (can only be set for an item in a window
+viewed as icons or buttons).
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as rectangle.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000246" class="method-detail">
+        <a name="M000246"></a>
+
+        <div class="method-heading">
+          <span class="method-name">class2<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the class property &#8212; the class of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as type.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000276" class="method-detail">
+        <a name="M000276"></a>
+
+        <div class="method-heading">
+          <span class="method-name">comment<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000276">comment</a> property &#8212; the <a
+href="Item.html#M000276">comment</a> of the item, displayed in the “Get
+Info” window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000277" class="method-detail">
+        <a name="M000277"></a>
+
+        <div class="method-heading">
+          <span class="method-name">comment=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000276">comment</a> property &#8212; the <a
+href="Item.html#M000276">comment</a> of the item, displayed in the “Get
+Info” window.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000245" class="method-detail">
+        <a name="M000245"></a>
+
+        <div class="method-heading">
+          <span class="method-name">container<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000245">container</a> property &#8212; the <a
+href="Item.html#M000245">container</a> of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000259" class="method-detail">
+        <a name="M000259"></a>
+
+        <div class="method-heading">
+          <span class="method-name">creation_date<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the creation date property &#8212; the date on which the item was
+created.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as date.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000261" class="method-detail">
+        <a name="M000261"></a>
+
+        <div class="method-heading">
+          <span class="method-name">description<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000261">description</a> property &#8212; a <a
+href="Item.html#M000261">description</a> of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000262" class="method-detail">
+        <a name="M000262"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_position<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the desktop <a href="Item.html#M000278">position</a> property &#8212;
+the <a href="Item.html#M000278">position</a> of the item on the desktop.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as point.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000263" class="method-detail">
+        <a name="M000263"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_position=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the desktop <a href="Item.html#M000278">position</a> property &#8212;
+the <a href="Item.html#M000278">position</a> of the item on the desktop.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as point.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000266" class="method-detail">
+        <a name="M000266"></a>
+
+        <div class="method-heading">
+          <span class="method-name">disk<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000266">disk</a> property &#8212; the <a
+href="Item.html#M000266">disk</a> on which the item is stored.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000286" class="method-detail">
+        <a name="M000286"></a>
+
+        <div class="method-heading">
+          <span class="method-name">displayed_name<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the displayed <a href="Item.html#M000242">name</a> property &#8212;
+the user-visible <a href="Item.html#M000242">name</a> of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000270" class="method-detail">
+        <a name="M000270"></a>
+
+        <div class="method-heading">
+          <span class="method-name">everyones_privileges<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the everyones privileges property.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as <a href="PRIV.html">OSA::Finder::PRIV</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000271" class="method-detail">
+        <a name="M000271"></a>
+
+        <div class="method-heading">
+          <span class="method-name">everyones_privileges=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the everyones privileges property.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as <a href="PRIV.html">OSA::Finder::PRIV</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000241" class="method-detail">
+        <a name="M000241"></a>
+
+        <div class="method-heading">
+          <span class="method-name">extension_hidden=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the extension hidden property &#8212; is the item&#8216;s extension
+hidden from the user?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000240" class="method-detail">
+        <a name="M000240"></a>
+
+        <div class="method-heading">
+          <span class="method-name">extension_hidden?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the extension hidden property &#8212; is the item&#8216;s extension
+hidden from the user?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000274" class="method-detail">
+        <a name="M000274"></a>
+
+        <div class="method-heading">
+          <span class="method-name">group<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000274">group</a> property &#8212; the user or
+<a href="Item.html#M000274">group</a> that has special access to the <a
+href="Item.html#M000245">container</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000275" class="method-detail">
+        <a name="M000275"></a>
+
+        <div class="method-heading">
+          <span class="method-name">group=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000274">group</a> property &#8212; the user or
+<a href="Item.html#M000274">group</a> that has special access to the <a
+href="Item.html#M000245">container</a>.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000248" class="method-detail">
+        <a name="M000248"></a>
+
+        <div class="method-heading">
+          <span class="method-name">group_privileges<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000274">group</a> privileges property.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as <a href="PRIV.html">OSA::Finder::PRIV</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000249" class="method-detail">
+        <a name="M000249"></a>
+
+        <div class="method-heading">
+          <span class="method-name">group_privileges=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000274">group</a> privileges property.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as <a href="PRIV.html">OSA::Finder::PRIV</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000250" class="method-detail">
+        <a name="M000250"></a>
+
+        <div class="method-heading">
+          <span class="method-name">icon<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000250">icon</a> property &#8212; the <a
+href="Item.html#M000250">icon</a> bitmap of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="IconFamily.html">OSA::Finder::IconFamily</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000251" class="method-detail">
+        <a name="M000251"></a>
+
+        <div class="method-heading">
+          <span class="method-name">icon=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000250">icon</a> property &#8212; the <a
+href="Item.html#M000250">icon</a> bitmap of the item.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as a <a
+href="IconFamily.html">OSA::Finder::IconFamily</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000260" class="method-detail">
+        <a name="M000260"></a>
+
+        <div class="method-heading">
+          <span class="method-name">id2<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the id property &#8212; the unique ID of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000267" class="method-detail">
+        <a name="M000267"></a>
+
+        <div class="method-heading">
+          <span class="method-name">index<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000267">index</a> property &#8212; the <a
+href="Item.html#M000267">index</a> in the front-to-back ordering within its
+<a href="Item.html#M000245">container</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000255" class="method-detail">
+        <a name="M000255"></a>
+
+        <div class="method-heading">
+          <span class="method-name">information_window<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the information window property &#8212; the information window for the
+item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000247" class="method-detail">
+        <a name="M000247"></a>
+
+        <div class="method-heading">
+          <span class="method-name">kind<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000247">kind</a> property &#8212; the <a
+href="Item.html#M000247">kind</a> of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000282" class="method-detail">
+        <a name="M000282"></a>
+
+        <div class="method-heading">
+          <span class="method-name">label_index<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the label <a href="Item.html#M000267">index</a> property &#8212; the
+label of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000283" class="method-detail">
+        <a name="M000283"></a>
+
+        <div class="method-heading">
+          <span class="method-name">label_index=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the label <a href="Item.html#M000267">index</a> property &#8212; the
+label of the item.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000281" class="method-detail">
+        <a name="M000281"></a>
+
+        <div class="method-heading">
+          <span class="method-name">locked=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the locked property &#8212; is the file <a
+href="Item.html#M000280">locked?</a>
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000280" class="method-detail">
+        <a name="M000280"></a>
+
+        <div class="method-heading">
+          <span class="method-name">locked?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the locked property &#8212; is the file <a
+href="Item.html#M000280">locked?</a>
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000264" class="method-detail">
+        <a name="M000264"></a>
+
+        <div class="method-heading">
+          <span class="method-name">modification_date<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the modification date property &#8212; the date on which the item was
+last modified.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as date.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000265" class="method-detail">
+        <a name="M000265"></a>
+
+        <div class="method-heading">
+          <span class="method-name">modification_date=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the modification date property &#8212; the date on which the item was
+last modified.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as date.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000242" class="method-detail">
+        <a name="M000242"></a>
+
+        <div class="method-heading">
+          <span class="method-name">name<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000242">name</a> property &#8212; the <a
+href="Item.html#M000242">name</a> of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000243" class="method-detail">
+        <a name="M000243"></a>
+
+        <div class="method-heading">
+          <span class="method-name">name=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000242">name</a> property &#8212; the <a
+href="Item.html#M000242">name</a> of the item.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000253" class="method-detail">
+        <a name="M000253"></a>
+
+        <div class="method-heading">
+          <span class="method-name">name_extension<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000242">name</a> extension property &#8212;
+the <a href="Item.html#M000242">name</a> extension of the item (such as
+“txt”).
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000254" class="method-detail">
+        <a name="M000254"></a>
+
+        <div class="method-heading">
+          <span class="method-name">name_extension=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000242">name</a> extension property &#8212;
+the <a href="Item.html#M000242">name</a> extension of the item (such as
+“txt”).
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000272" class="method-detail">
+        <a name="M000272"></a>
+
+        <div class="method-heading">
+          <span class="method-name">owner<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000272">owner</a> property &#8212; the user
+that owns the <a href="Item.html#M000245">container</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000273" class="method-detail">
+        <a name="M000273"></a>
+
+        <div class="method-heading">
+          <span class="method-name">owner=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000272">owner</a> property &#8212; the user
+that owns the <a href="Item.html#M000245">container</a>.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000256" class="method-detail">
+        <a name="M000256"></a>
+
+        <div class="method-heading">
+          <span class="method-name">owner_privileges<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000272">owner</a> privileges property.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as <a href="PRIV.html">OSA::Finder::PRIV</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000257" class="method-detail">
+        <a name="M000257"></a>
+
+        <div class="method-heading">
+          <span class="method-name">owner_privileges=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000272">owner</a> privileges property.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as <a href="PRIV.html">OSA::Finder::PRIV</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000252" class="method-detail">
+        <a name="M000252"></a>
+
+        <div class="method-heading">
+          <span class="method-name">physical_size<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the physical <a href="Item.html#M000244">size</a> property &#8212; the
+actual space used by the item on <a href="Item.html#M000266">disk</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as double integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000278" class="method-detail">
+        <a name="M000278"></a>
+
+        <div class="method-heading">
+          <span class="method-name">position<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000278">position</a> property &#8212; the <a
+href="Item.html#M000278">position</a> of the item within its parent window
+(can only be set for an item in a window viewed as icons or buttons).
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as point.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000279" class="method-detail">
+        <a name="M000279"></a>
+
+        <div class="method-heading">
+          <span class="method-name">position=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000278">position</a> property &#8212; the <a
+href="Item.html#M000278">position</a> of the item within its parent window
+(can only be set for an item in a window viewed as icons or buttons).
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as point.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000268" class="method-detail">
+        <a name="M000268"></a>
+
+        <div class="method-heading">
+          <span class="method-name">properties<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000268">properties</a> property &#8212; every
+property of an item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as record.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000269" class="method-detail">
+        <a name="M000269"></a>
+
+        <div class="method-heading">
+          <span class="method-name">properties=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Item.html#M000268">properties</a> property &#8212; every
+property of an item.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as record.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000244" class="method-detail">
+        <a name="M000244"></a>
+
+        <div class="method-heading">
+          <span class="method-name">size<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Item.html#M000244">size</a> property &#8212; the logical
+<a href="Item.html#M000244">size</a> of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as double integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000258" class="method-detail">
+        <a name="M000258"></a>
+
+        <div class="method-heading">
+          <span class="method-name">url<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the URL property &#8212; the URL of the item.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

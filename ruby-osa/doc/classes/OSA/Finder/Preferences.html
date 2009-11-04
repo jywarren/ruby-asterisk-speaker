@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: OSA::Finder::Preferences</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">OSA::Finder::Preferences</td>
+        </tr>
+<!--
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/tmp/Finder-0-92443_rb.html">
+                /tmp/Finder-0-92443.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+-->
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                OSA::Element
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+The <a href="../Finder.html">Finder</a> <a
+href="Preferences.html">Preferences</a>.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000232">all_name_extensions_showing=</a>&nbsp;&nbsp;
+      <a href="#M000231">all_name_extensions_showing?</a>&nbsp;&nbsp;
+      <a href="#M000222">column_view_options</a>&nbsp;&nbsp;
+      <a href="#M000237">delay_before_springing</a>&nbsp;&nbsp;
+      <a href="#M000238">delay_before_springing=</a>&nbsp;&nbsp;
+      <a href="#M000217">desktop_shows_connected_servers=</a>&nbsp;&nbsp;
+      <a href="#M000216">desktop_shows_connected_servers?</a>&nbsp;&nbsp;
+      <a href="#M000234">desktop_shows_external_hard_disks=</a>&nbsp;&nbsp;
+      <a href="#M000233">desktop_shows_external_hard_disks?</a>&nbsp;&nbsp;
+      <a href="#M000224">desktop_shows_hard_disks=</a>&nbsp;&nbsp;
+      <a href="#M000223">desktop_shows_hard_disks?</a>&nbsp;&nbsp;
+      <a href="#M000236">desktop_shows_removable_media=</a>&nbsp;&nbsp;
+      <a href="#M000235">desktop_shows_removable_media?</a>&nbsp;&nbsp;
+      <a href="#M000230">folders_open_in_new_windows=</a>&nbsp;&nbsp;
+      <a href="#M000229">folders_open_in_new_windows?</a>&nbsp;&nbsp;
+      <a href="#M000228">folders_spring_open=</a>&nbsp;&nbsp;
+      <a href="#M000227">folders_spring_open?</a>&nbsp;&nbsp;
+      <a href="#M000239">icon_view_options</a>&nbsp;&nbsp;
+      <a href="#M000225">list_view_options</a>&nbsp;&nbsp;
+      <a href="#M000218">new_window_target</a>&nbsp;&nbsp;
+      <a href="#M000219">new_window_target=</a>&nbsp;&nbsp;
+      <a href="#M000221">new_windows_open_in_column_view=</a>&nbsp;&nbsp;
+      <a href="#M000220">new_windows_open_in_column_view?</a>&nbsp;&nbsp;
+      <a href="#M000226">window</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000232" class="method-detail">
+        <a name="M000232"></a>
+
+        <div class="method-heading">
+          <span class="method-name">all_name_extensions_showing=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the all name extensions showing property &#8212; show name extensions,
+even for items whose “extension hidden” is true?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000231" class="method-detail">
+        <a name="M000231"></a>
+
+        <div class="method-heading">
+          <span class="method-name">all_name_extensions_showing?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the all name extensions showing property &#8212; show name extensions,
+even for items whose “extension hidden” is true?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000222" class="method-detail">
+        <a name="M000222"></a>
+
+        <div class="method-heading">
+          <span class="method-name">column_view_options<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the column view options property &#8212; the column view options for
+all windows.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="ColumnViewOptions.html">OSA::Finder::ColumnViewOptions</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000237" class="method-detail">
+        <a name="M000237"></a>
+
+        <div class="method-heading">
+          <span class="method-name">delay_before_springing<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the delay before springing property &#8212; the delay before springing
+open a container in seconds (from 0.167 to 1.169).
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as real.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000238" class="method-detail">
+        <a name="M000238"></a>
+
+        <div class="method-heading">
+          <span class="method-name">delay_before_springing=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the delay before springing property &#8212; the delay before springing
+open a container in seconds (from 0.167 to 1.169).
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as real.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000217" class="method-detail">
+        <a name="M000217"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_connected_servers=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the desktop shows connected servers property &#8212; connected servers
+appear on the desktop?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000216" class="method-detail">
+        <a name="M000216"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_connected_servers?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the desktop shows connected servers property &#8212; connected servers
+appear on the desktop?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000234" class="method-detail">
+        <a name="M000234"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_external_hard_disks=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the desktop shows external hard disks property &#8212; external hard
+disks appear on the desktop?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000233" class="method-detail">
+        <a name="M000233"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_external_hard_disks?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the desktop shows external hard disks property &#8212; external hard
+disks appear on the desktop?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000224" class="method-detail">
+        <a name="M000224"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_hard_disks=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the desktop shows hard disks property &#8212; hard disks appear on the
+desktop?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000223" class="method-detail">
+        <a name="M000223"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_hard_disks?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the desktop shows hard disks property &#8212; hard disks appear on the
+desktop?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000236" class="method-detail">
+        <a name="M000236"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_removable_media=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the desktop shows removable media property &#8212; cDs, DVDs, and
+iPods appear on the desktop?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000235" class="method-detail">
+        <a name="M000235"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_shows_removable_media?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the desktop shows removable media property &#8212; cDs, DVDs, and
+iPods appear on the desktop?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000230" class="method-detail">
+        <a name="M000230"></a>
+
+        <div class="method-heading">
+          <span class="method-name">folders_open_in_new_windows=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the folders open in new windows property &#8212; folders open into new
+windows?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000229" class="method-detail">
+        <a name="M000229"></a>
+
+        <div class="method-heading">
+          <span class="method-name">folders_open_in_new_windows?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the folders open in new windows property &#8212; folders open into new
+windows?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000228" class="method-detail">
+        <a name="M000228"></a>
+
+        <div class="method-heading">
+          <span class="method-name">folders_spring_open=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the folders spring open property &#8212; spring open folders after the
+specified delay?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000227" class="method-detail">
+        <a name="M000227"></a>
+
+        <div class="method-heading">
+          <span class="method-name">folders_spring_open?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the folders spring open property &#8212; spring open folders after the
+specified delay?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000239" class="method-detail">
+        <a name="M000239"></a>
+
+        <div class="method-heading">
+          <span class="method-name">icon_view_options<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the icon view options property &#8212; the default icon view options.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="IconViewOptions.html">OSA::Finder::IconViewOptions</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000225" class="method-detail">
+        <a name="M000225"></a>
+
+        <div class="method-heading">
+          <span class="method-name">list_view_options<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the list view options property &#8212; the default list view options.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="ListViewOptions.html">OSA::Finder::ListViewOptions</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000218" class="method-detail">
+        <a name="M000218"></a>
+
+        <div class="method-heading">
+          <span class="method-name">new_window_target<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the new <a href="Preferences.html#M000226">window</a> target property
+&#8212; target location for a newly-opened <a
+href="../Finder.html">Finder</a> <a
+href="Preferences.html#M000226">window</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000219" class="method-detail">
+        <a name="M000219"></a>
+
+        <div class="method-heading">
+          <span class="method-name">new_window_target=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the new <a href="Preferences.html#M000226">window</a> target property
+&#8212; target location for a newly-opened <a
+href="../Finder.html">Finder</a> <a
+href="Preferences.html#M000226">window</a>.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000221" class="method-detail">
+        <a name="M000221"></a>
+
+        <div class="method-heading">
+          <span class="method-name">new_windows_open_in_column_view=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the new windows open in column view property &#8212; open new windows
+in column view?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000220" class="method-detail">
+        <a name="M000220"></a>
+
+        <div class="method-heading">
+          <span class="method-name">new_windows_open_in_column_view?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the new windows open in column view property &#8212; open new windows
+in column view?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000226" class="method-detail">
+        <a name="M000226"></a>
+
+        <div class="method-heading">
+          <span class="method-name">window<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Preferences.html#M000226">window</a> property &#8212; the
+<a href="Preferences.html#M000226">window</a> that would open if <a
+href="../Finder.html">Finder</a> preferences was opened.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="PreferencesWindow.html">OSA::Finder::PreferencesWindow</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

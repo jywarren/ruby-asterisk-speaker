@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: OSA::Finder::Application</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">OSA::Finder::Application</td>
+        </tr>
+<!--
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/tmp/Finder-0-92443_rb.html">
+                /tmp/Finder-0-92443.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+-->
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                OSA::Element
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+The <a href="../Finder.html">Finder</a>.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000189">activate</a>&nbsp;&nbsp;
+      <a href="#M000192">activate2</a>&nbsp;&nbsp;
+      <a href="#M000177">alias_files</a>&nbsp;&nbsp;
+      <a href="#M000178">application_files</a>&nbsp;&nbsp;
+      <a href="#M000204">clean_up</a>&nbsp;&nbsp;
+      <a href="#M000158">clipboard</a>&nbsp;&nbsp;
+      <a href="#M000185">clipping_windows</a>&nbsp;&nbsp;
+      <a href="#M000181">clippings</a>&nbsp;&nbsp;
+      <a href="#M000193">close</a>&nbsp;&nbsp;
+      <a href="#M000165">computer_container</a>&nbsp;&nbsp;
+      <a href="#M000173">containers</a>&nbsp;&nbsp;
+      <a href="#M000202">copy</a>&nbsp;&nbsp;
+      <a href="#M000194">count</a>&nbsp;&nbsp;
+      <a href="#M000195">data_size</a>&nbsp;&nbsp;
+      <a href="#M000196">delete</a>&nbsp;&nbsp;
+      <a href="#M000170">desktop</a>&nbsp;&nbsp;
+      <a href="#M000186">desktop_picture</a>&nbsp;&nbsp;
+      <a href="#M000187">desktop_picture=</a>&nbsp;&nbsp;
+      <a href="#M000174">disks</a>&nbsp;&nbsp;
+      <a href="#M000179">document_files</a>&nbsp;&nbsp;
+      <a href="#M000197">duplicate</a>&nbsp;&nbsp;
+      <a href="#M000205">eject</a>&nbsp;&nbsp;
+      <a href="#M000206">empty</a>&nbsp;&nbsp;
+      <a href="#M000207">erase</a>&nbsp;&nbsp;
+      <a href="#M000198">exists?</a>&nbsp;&nbsp;
+      <a href="#M000176">files</a>&nbsp;&nbsp;
+      <a href="#M000159">finder_preferences</a>&nbsp;&nbsp;
+      <a href="#M000184">finder_windows</a>&nbsp;&nbsp;
+      <a href="#M000175">folders</a>&nbsp;&nbsp;
+      <a href="#M000164">frontmost=</a>&nbsp;&nbsp;
+      <a href="#M000163">frontmost?</a>&nbsp;&nbsp;
+      <a href="#M000169">home</a>&nbsp;&nbsp;
+      <a href="#M000171">insertion_location</a>&nbsp;&nbsp;
+      <a href="#M000180">internet_location_files</a>&nbsp;&nbsp;
+      <a href="#M000172">items</a>&nbsp;&nbsp;
+      <a href="#M000199">make</a>&nbsp;&nbsp;
+      <a href="#M000200">move</a>&nbsp;&nbsp;
+      <a href="#M000157">name</a>&nbsp;&nbsp;
+      <a href="#M000188">open</a>&nbsp;&nbsp;
+      <a href="#M000182">packages</a>&nbsp;&nbsp;
+      <a href="#M000190">print</a>&nbsp;&nbsp;
+      <a href="#M000168">product_version</a>&nbsp;&nbsp;
+      <a href="#M000191">quit</a>&nbsp;&nbsp;
+      <a href="#M000210">restart</a>&nbsp;&nbsp;
+      <a href="#M000208">reveal</a>&nbsp;&nbsp;
+      <a href="#M000201">select</a>&nbsp;&nbsp;
+      <a href="#M000161">selection</a>&nbsp;&nbsp;
+      <a href="#M000162">selection=</a>&nbsp;&nbsp;
+      <a href="#M000211">shut_down</a>&nbsp;&nbsp;
+      <a href="#M000212">sleep</a>&nbsp;&nbsp;
+      <a href="#M000203">sort</a>&nbsp;&nbsp;
+      <a href="#M000160">startup_disk</a>&nbsp;&nbsp;
+      <a href="#M000166">trash</a>&nbsp;&nbsp;
+      <a href="#M000209">update</a>&nbsp;&nbsp;
+      <a href="#M000167">version</a>&nbsp;&nbsp;
+      <a href="#M000156">visible=</a>&nbsp;&nbsp;
+      <a href="#M000155">visible?</a>&nbsp;&nbsp;
+      <a href="#M000183">windows</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000189" class="method-detail">
+        <a name="M000189"></a>
+
+        <div class="method-heading">
+          <span class="method-name">activate<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Activate the application.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000192" class="method-detail">
+        <a name="M000192"></a>
+
+        <div class="method-heading">
+          <span class="method-name">activate2(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Activate the specified window (or the <a href="../Finder.html">Finder</a>).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The window to <a href="Application.html#M000189">activate</a> (if not
+specified, activates the <a href="../Finder.html">Finder</a>).
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000177" class="method-detail">
+        <a name="M000177"></a>
+
+        <div class="method-heading">
+          <span class="method-name">alias_files<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the alias <a href="Application.html#M000176">files</a> associated with
+this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="AliasFile.html">OSA::Finder::AliasFile</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000178" class="method-detail">
+        <a name="M000178"></a>
+
+        <div class="method-heading">
+          <span class="method-name">application_files<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the application <a href="Application.html#M000176">files</a>
+associated with this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="ApplicationFile.html">OSA::Finder::ApplicationFile</a>
+objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000204" class="method-detail">
+        <a name="M000204"></a>
+
+        <div class="method-heading">
+          <span class="method-name">clean_up(direct, by=nil)<br />
+clean_up(direct, :by => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Arrange <a href="Application.html#M000172">items</a> in window nicely (only
+applies to <a href="Application.html#M000188">open</a> <a
+href="Application.html#M000183">windows</a> in icon view that are not kept
+arranged).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The window to clean up.
+
+</td></tr>
+<tr><td valign="top">by:</td><td>The order in which to clean up the objects (<a
+href="Application.html#M000157">name</a>, index, date, etc.). Optional. Can
+be passed as a Hash key/value.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000158" class="method-detail">
+        <a name="M000158"></a>
+
+        <div class="method-heading">
+          <span class="method-name">clipboard<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000158">clipboard</a> property &#8212;
+(NOT AVAILABLE YET) the <a href="../Finder.html">Finder</a>’s <a
+href="Application.html#M000158">clipboard</a> window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000185" class="method-detail">
+        <a name="M000185"></a>
+
+        <div class="method-heading">
+          <span class="method-name">clipping_windows<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the clipping <a href="Application.html#M000183">windows</a> associated
+with this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="ClippingWindow.html">OSA::Finder::ClippingWindow</a>
+objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000181" class="method-detail">
+        <a name="M000181"></a>
+
+        <div class="method-heading">
+          <span class="method-name">clippings<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000181">clippings</a> associated with
+this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Clipping.html">OSA::Finder::Clipping</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000193" class="method-detail">
+        <a name="M000193"></a>
+
+        <div class="method-heading">
+          <span class="method-name">close(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Close an object.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object to <a href="Application.html#M000193">close</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000165" class="method-detail">
+        <a name="M000165"></a>
+
+        <div class="method-heading">
+          <span class="method-name">computer_container<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the computer container property &#8212; the computer location (as in
+Go &gt; Computer).
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="Computerobject.html">OSA::Finder::Computerobject</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000173" class="method-detail">
+        <a name="M000173"></a>
+
+        <div class="method-heading">
+          <span class="method-name">containers<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000173">containers</a> associated with
+this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Container.html">OSA::Finder::Container</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000202" class="method-detail">
+        <a name="M000202"></a>
+
+        <div class="method-heading">
+          <span class="method-name">copy<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+(NOT AVAILABLE YET) Copy the selected <a
+href="Application.html#M000172">items</a> to the <a
+href="Application.html#M000158">clipboard</a> (the <a
+href="../Finder.html">Finder</a> must be the front application).
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000194" class="method-detail">
+        <a name="M000194"></a>
+
+        <div class="method-heading">
+          <span class="method-name">count(direct, each)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the number of elements of a particular class within an object.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object whose elements are to be counted.
+
+</td></tr>
+<tr><td valign="top">each:</td><td>The class of the elements to be counted.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>The number of elements.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000195" class="method-detail">
+        <a name="M000195"></a>
+
+        <div class="method-heading">
+          <span class="method-name">data_size(direct, as=nil)<br />
+data_size(direct, :as => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the size in bytes of an object.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object whose data size is to be returned.
+
+</td></tr>
+<tr><td valign="top">as:</td><td>The data type for which the size is calculated. Optional. Can be passed as
+a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>The size of the object in bytes.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000196" class="method-detail">
+        <a name="M000196"></a>
+
+        <div class="method-heading">
+          <span class="method-name">delete(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Move an item from its container to the <a
+href="Application.html#M000166">trash</a>.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The item to <a href="Application.html#M000196">delete</a>.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>To the item that was just deleted.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000170" class="method-detail">
+        <a name="M000170"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000170">desktop</a> property &#8212;
+the <a href="Application.html#M000170">desktop</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="Desktopobject.html">OSA::Finder::Desktopobject</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000186" class="method-detail">
+        <a name="M000186"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_picture<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000170">desktop</a> picture property
+&#8212; the <a href="Application.html#M000170">desktop</a> picture of the
+main monitor.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a href="File.html">OSA::Finder::File</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000187" class="method-detail">
+        <a name="M000187"></a>
+
+        <div class="method-heading">
+          <span class="method-name">desktop_picture=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Application.html#M000170">desktop</a> picture property
+&#8212; the <a href="Application.html#M000170">desktop</a> picture of the
+main monitor.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as a <a href="File.html">OSA::Finder::File</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000174" class="method-detail">
+        <a name="M000174"></a>
+
+        <div class="method-heading">
+          <span class="method-name">disks<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000174">disks</a> associated with this
+object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Disk.html">OSA::Finder::Disk</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000179" class="method-detail">
+        <a name="M000179"></a>
+
+        <div class="method-heading">
+          <span class="method-name">document_files<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the document <a href="Application.html#M000176">files</a> associated
+with this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="DocumentFile.html">OSA::Finder::DocumentFile</a>
+objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000197" class="method-detail">
+        <a name="M000197"></a>
+
+        <div class="method-heading">
+          <span class="method-name">duplicate(direct, to=nil, replacing=nil, routing_suppressed=nil)<br />
+duplicate(direct, :to => nil, :replacing => nil, :routing_suppressed => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Duplicate one or more object(s).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object(s) to <a href="Application.html#M000197">duplicate</a>.
+
+</td></tr>
+<tr><td valign="top">to:</td><td>The new location for the object(s). Optional. Can be passed as a Hash
+key/value.
+
+</td></tr>
+<tr><td valign="top">replacing:</td><td>Specifies whether or not to replace <a
+href="Application.html#M000172">items</a> in the destination that have the
+same <a href="Application.html#M000157">name</a> as <a
+href="Application.html#M000172">items</a> being duplicated. Optional. Can
+be passed as a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">routing_suppressed:</td><td>Specifies whether or not to autoroute <a
+href="Application.html#M000172">items</a> (default is false). Only applies
+when copying to the system folder. Optional. Can be passed as a Hash
+key/value.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>To the duplicated object(s).
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000205" class="method-detail">
+        <a name="M000205"></a>
+
+        <div class="method-heading">
+          <span class="method-name">eject(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Eject the specified disk(s).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The disk(s) to <a href="Application.html#M000205">eject</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000206" class="method-detail">
+        <a name="M000206"></a>
+
+        <div class="method-heading">
+          <span class="method-name">empty(direct, security=nil)<br />
+empty(direct, :security => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Empty the <a href="Application.html#M000166">trash</a>.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>“<a href="Application.html#M000206">empty</a>” and “<a
+href="Application.html#M000206">empty</a> <a
+href="Application.html#M000166">trash</a>” both do the same thing.
+
+</td></tr>
+<tr><td valign="top">security:</td><td>Specifies whether or not to <a href="Application.html#M000206">empty</a>
+the <a href="Application.html#M000166">trash</a> securely. Optional. Can be
+passed as a Hash key/value.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000207" class="method-detail">
+        <a name="M000207"></a>
+
+        <div class="method-heading">
+          <span class="method-name">erase(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+(NOT AVAILABLE) Erase the specified disk(s).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The <a href="Application.html#M000172">items</a> to <a
+href="Application.html#M000207">erase</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000198" class="method-detail">
+        <a name="M000198"></a>
+
+        <div class="method-heading">
+          <span class="method-name">exists?(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Verify if an object exists.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object in question.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>True if it exists, false if not.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000176" class="method-detail">
+        <a name="M000176"></a>
+
+        <div class="method-heading">
+          <span class="method-name">files<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000176">files</a> associated with this
+object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="File.html">OSA::Finder::File</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000159" class="method-detail">
+        <a name="M000159"></a>
+
+        <div class="method-heading">
+          <span class="method-name">finder_preferences<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="../Finder.html">Finder</a> preferences property &#8212;
+various preferences that apply to the <a href="../Finder.html">Finder</a>
+as a whole.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="Preferences.html">OSA::Finder::Preferences</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000184" class="method-detail">
+        <a name="M000184"></a>
+
+        <div class="method-heading">
+          <span class="method-name">finder_windows<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="../Finder.html">Finder</a> <a
+href="Application.html#M000183">windows</a> associated with this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="FinderWindow.html">OSA::Finder::FinderWindow</a>
+objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000175" class="method-detail">
+        <a name="M000175"></a>
+
+        <div class="method-heading">
+          <span class="method-name">folders<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000175">folders</a> associated with
+this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Folder.html">OSA::Finder::Folder</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000164" class="method-detail">
+        <a name="M000164"></a>
+
+        <div class="method-heading">
+          <span class="method-name">frontmost=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the frontmost property &#8212; is the <a
+href="../Finder.html">Finder</a> the frontmost process?
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000163" class="method-detail">
+        <a name="M000163"></a>
+
+        <div class="method-heading">
+          <span class="method-name">frontmost?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the frontmost property &#8212; is the <a
+href="../Finder.html">Finder</a> the frontmost process?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000169" class="method-detail">
+        <a name="M000169"></a>
+
+        <div class="method-heading">
+          <span class="method-name">home<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000169">home</a> property &#8212; the
+<a href="Application.html#M000169">home</a> directory.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a href="Folder.html">OSA::Finder::Folder</a>
+object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000171" class="method-detail">
+        <a name="M000171"></a>
+
+        <div class="method-heading">
+          <span class="method-name">insertion_location<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the insertion location property &#8212; the container in which a new
+folder would appear if “New <a href="Folder.html">Folder</a>” was
+selected.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000180" class="method-detail">
+        <a name="M000180"></a>
+
+        <div class="method-heading">
+          <span class="method-name">internet_location_files<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the internet location <a href="Application.html#M000176">files</a>
+associated with this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a
+href="InternetLocationFile.html">OSA::Finder::InternetLocationFile</a>
+objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000172" class="method-detail">
+        <a name="M000172"></a>
+
+        <div class="method-heading">
+          <span class="method-name">items<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000172">items</a> associated with this
+object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Item.html">OSA::Finder::Item</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000199" class="method-detail">
+        <a name="M000199"></a>
+
+        <div class="method-heading">
+          <span class="method-name">make(new, at, to=nil, with_properties=nil)<br />
+make(new, at, :to => nil, :with_properties => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Make a new element.
+</p>
+<table>
+<tr><td valign="top">new:</td><td>The class of the new element.
+
+</td></tr>
+<tr><td valign="top">at:</td><td>The location at which to insert the element.
+
+</td></tr>
+<tr><td valign="top">to:</td><td>When creating an alias file, the original item to create an alias to or
+when creating a file viewer window, the target of the window. Optional. Can
+be passed as a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">with_properties:</td><td>The initial values for the properties of the element. Optional. Can be
+passed as a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>To the new object(s).
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000200" class="method-detail">
+        <a name="M000200"></a>
+
+        <div class="method-heading">
+          <span class="method-name">move(direct, to, replacing=nil, positioned_at=nil, routing_suppressed=nil)<br />
+move(direct, to, :replacing => nil, :positioned_at => nil, :routing_suppressed => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Move object(s) to a new location.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object(s) to <a href="Application.html#M000200">move</a>.
+
+</td></tr>
+<tr><td valign="top">to:</td><td>The new location for the object(s).
+
+</td></tr>
+<tr><td valign="top">replacing:</td><td>Specifies whether or not to replace <a
+href="Application.html#M000172">items</a> in the destination that have the
+same <a href="Application.html#M000157">name</a> as <a
+href="Application.html#M000172">items</a> being moved. Optional. Can be
+passed as a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">positioned_at:</td><td>Gives a list (in local window coordinates) of positions for the destination
+<a href="Application.html#M000172">items</a>. Optional. Can be passed as a
+Hash key/value.
+
+</td></tr>
+<tr><td valign="top">routing_suppressed:</td><td>Specifies whether or not to autoroute <a
+href="Application.html#M000172">items</a> (default is false). Only applies
+when moving to the system folder. Optional. Can be passed as a Hash
+key/value.
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>To the object(s) after they have been moved.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000157" class="method-detail">
+        <a name="M000157"></a>
+
+        <div class="method-heading">
+          <span class="method-name">name<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000157">name</a> property &#8212; the
+<a href="../Finder.html">Finder</a>’s <a
+href="Application.html#M000157">name</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000188" class="method-detail">
+        <a name="M000188"></a>
+
+        <div class="method-heading">
+          <span class="method-name">open(direct, using=nil, with_properties=nil)<br />
+open(direct, :using => nil, :with_properties => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Open the specified object(s).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>List of objects to <a href="Application.html#M000188">open</a>.
+
+</td></tr>
+<tr><td valign="top">using:</td><td>The application file to <a href="Application.html#M000188">open</a> the
+object with. Optional. Can be passed as a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">with_properties:</td><td>The initial values for the properties, to be included with the <a
+href="Application.html#M000188">open</a> command sent to the application
+that opens the direct object. Optional. Can be passed as a Hash key/value.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000182" class="method-detail">
+        <a name="M000182"></a>
+
+        <div class="method-heading">
+          <span class="method-name">packages<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000182">packages</a> associated with
+this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Package.html">OSA::Finder::Package</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000190" class="method-detail">
+        <a name="M000190"></a>
+
+        <div class="method-heading">
+          <span class="method-name">print(direct, with_properties=nil)<br />
+print(direct, :with_properties => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Print the specified object(s).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>List of objects to <a href="Application.html#M000190">print</a>.
+
+</td></tr>
+<tr><td valign="top">with_properties:</td><td>Optional properties to be included with the <a
+href="Application.html#M000190">print</a> command sent to the application
+that prints the direct object. Optional. Can be passed as a Hash key/value.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000168" class="method-detail">
+        <a name="M000168"></a>
+
+        <div class="method-heading">
+          <span class="method-name">product_version<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the product <a href="Application.html#M000167">version</a> property
+&#8212; the <a href="Application.html#M000167">version</a> of the System
+software running on this computer.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000191" class="method-detail">
+        <a name="M000191"></a>
+
+        <div class="method-heading">
+          <span class="method-name">quit<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Quit the <a href="../Finder.html">Finder</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000210" class="method-detail">
+        <a name="M000210"></a>
+
+        <div class="method-heading">
+          <span class="method-name">restart<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Restart the computer.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000208" class="method-detail">
+        <a name="M000208"></a>
+
+        <div class="method-heading">
+          <span class="method-name">reveal(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Bring the specified object(s) into view.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object to be made visible.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000201" class="method-detail">
+        <a name="M000201"></a>
+
+        <div class="method-heading">
+          <span class="method-name">select(direct)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Select the specified object(s).
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The object to <a href="Application.html#M000201">select</a>.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000161" class="method-detail">
+        <a name="M000161"></a>
+
+        <div class="method-heading">
+          <span class="method-name">selection<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000161">selection</a> property &#8212;
+the <a href="Application.html#M000161">selection</a> in the frontmost <a
+href="../Finder.html">Finder</a> window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000162" class="method-detail">
+        <a name="M000162"></a>
+
+        <div class="method-heading">
+          <span class="method-name">selection=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Application.html#M000161">selection</a> property &#8212;
+the <a href="Application.html#M000161">selection</a> in the frontmost <a
+href="../Finder.html">Finder</a> window.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as specifier.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000211" class="method-detail">
+        <a name="M000211"></a>
+
+        <div class="method-heading">
+          <span class="method-name">shut_down<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Shut Down the computer.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000212" class="method-detail">
+        <a name="M000212"></a>
+
+        <div class="method-heading">
+          <span class="method-name">sleep<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Put the computer to <a href="Application.html#M000212">sleep</a>.
+</p>
+        </div>
+      </div>
+
+      <div id="method-M000203" class="method-detail">
+        <a name="M000203"></a>
+
+        <div class="method-heading">
+          <span class="method-name">sort(direct, by)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Return the specified object(s) in a sorted list.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>A list of finder objects to <a href="Application.html#M000203">sort</a>.
+
+</td></tr>
+<tr><td valign="top">by:</td><td>The property to <a href="Application.html#M000203">sort</a> the <a
+href="Application.html#M000172">items</a> by (<a
+href="Application.html#M000157">name</a>, index, date, etc.).
+
+</td></tr>
+<tr><td valign="top">Returns:</td><td>The sorted <a href="Application.html#M000172">items</a> in their new order.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000160" class="method-detail">
+        <a name="M000160"></a>
+
+        <div class="method-heading">
+          <span class="method-name">startup_disk<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the startup disk property &#8212; the startup disk.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a href="Disk.html">OSA::Finder::Disk</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000166" class="method-detail">
+        <a name="M000166"></a>
+
+        <div class="method-heading">
+          <span class="method-name">trash<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000166">trash</a> property &#8212; the
+<a href="Application.html#M000166">trash</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as a <a
+href="Trashobject.html">OSA::Finder::Trashobject</a> object.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000209" class="method-detail">
+        <a name="M000209"></a>
+
+        <div class="method-heading">
+          <span class="method-name">update(direct, necessity=nil, registering_applications=nil)<br />
+update(direct, :necessity => nil, :registering_applications => nil)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Update the display of the specified object(s) to match their on-disk
+representation.
+</p>
+<table>
+<tr><td valign="top">direct:</td><td>The item to <a href="Application.html#M000209">update</a>.
+
+</td></tr>
+<tr><td valign="top">necessity:</td><td>Only <a href="Application.html#M000209">update</a> if necessary (i.e. a
+finder window is <a href="Application.html#M000188">open</a>). default is
+false. Optional. Can be passed as a Hash key/value.
+
+</td></tr>
+<tr><td valign="top">registering_applications:</td><td>Register applications. default is true. Optional. Can be passed as a Hash
+key/value.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000167" class="method-detail">
+        <a name="M000167"></a>
+
+        <div class="method-heading">
+          <span class="method-name">version<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000167">version</a> property &#8212;
+the <a href="Application.html#M000167">version</a> of the <a
+href="../Finder.html">Finder</a>.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000156" class="method-detail">
+        <a name="M000156"></a>
+
+        <div class="method-heading">
+          <span class="method-name">visible=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the visible property &#8212; is the <a
+href="../Finder.html">Finder</a>’s layer <a
+href="Application.html#M000155">visible?</a>
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000155" class="method-detail">
+        <a name="M000155"></a>
+
+        <div class="method-heading">
+          <span class="method-name">visible?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the visible property &#8212; is the <a
+href="../Finder.html">Finder</a>’s layer <a
+href="Application.html#M000155">visible?</a>
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000183" class="method-detail">
+        <a name="M000183"></a>
+
+        <div class="method-heading">
+          <span class="method-name">windows<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Application.html#M000183">windows</a> associated with
+this object.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>An Array of <a href="Window.html">OSA::Finder::Window</a> objects.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

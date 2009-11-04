@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: OSA::Finder::Window</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">OSA::Finder::Window</td>
+        </tr>
+<!--
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+                <a href="../../../files/tmp/Finder-0-92443_rb.html">
+                /tmp/Finder-0-92443.rb
+                </a>
+        <br />
+            </td>
+        </tr>
+-->
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+                OSA::Element
+            </td>
+        </tr>
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+Every window.
+</p>
+
+    </div>
+
+
+   </div>
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+      <a href="#M000319">bounds</a>&nbsp;&nbsp;
+      <a href="#M000320">bounds=</a>&nbsp;&nbsp;
+      <a href="#M000301">closeable?</a>&nbsp;&nbsp;
+      <a href="#M000304">collapsed=</a>&nbsp;&nbsp;
+      <a href="#M000303">collapsed?</a>&nbsp;&nbsp;
+      <a href="#M000318">floating?</a>&nbsp;&nbsp;
+      <a href="#M000308">id2</a>&nbsp;&nbsp;
+      <a href="#M000312">index</a>&nbsp;&nbsp;
+      <a href="#M000313">index=</a>&nbsp;&nbsp;
+      <a href="#M000306">modal?</a>&nbsp;&nbsp;
+      <a href="#M000302">name</a>&nbsp;&nbsp;
+      <a href="#M000316">position</a>&nbsp;&nbsp;
+      <a href="#M000317">position=</a>&nbsp;&nbsp;
+      <a href="#M000314">properties</a>&nbsp;&nbsp;
+      <a href="#M000315">properties=</a>&nbsp;&nbsp;
+      <a href="#M000307">resizable?</a>&nbsp;&nbsp;
+      <a href="#M000305">titled?</a>&nbsp;&nbsp;
+      <a href="#M000300">visible?</a>&nbsp;&nbsp;
+      <a href="#M000309">zoomable?</a>&nbsp;&nbsp;
+      <a href="#M000311">zoomed=</a>&nbsp;&nbsp;
+      <a href="#M000310">zoomed?</a>&nbsp;&nbsp;
+      </div>
+    </div>
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+    <div id="methods">
+      <h3 class="section-bar">Public Instance methods</h3>
+
+      <div id="method-M000319" class="method-detail">
+        <a name="M000319"></a>
+
+        <div class="method-heading">
+          <span class="method-name">bounds<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Window.html#M000319">bounds</a> property &#8212; the
+boundary rectangle for the window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as rectangle.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000320" class="method-detail">
+        <a name="M000320"></a>
+
+        <div class="method-heading">
+          <span class="method-name">bounds=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Window.html#M000319">bounds</a> property &#8212; the
+boundary rectangle for the window.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as rectangle.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000301" class="method-detail">
+        <a name="M000301"></a>
+
+        <div class="method-heading">
+          <span class="method-name">closeable?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the closeable property &#8212; does the window have a close box?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000304" class="method-detail">
+        <a name="M000304"></a>
+
+        <div class="method-heading">
+          <span class="method-name">collapsed=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the collapsed property &#8212; is the window collapsed.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000303" class="method-detail">
+        <a name="M000303"></a>
+
+        <div class="method-heading">
+          <span class="method-name">collapsed?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the collapsed property &#8212; is the window collapsed.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000318" class="method-detail">
+        <a name="M000318"></a>
+
+        <div class="method-heading">
+          <span class="method-name">floating?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the floating property &#8212; does the window have a title bar?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000308" class="method-detail">
+        <a name="M000308"></a>
+
+        <div class="method-heading">
+          <span class="method-name">id2<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the id property &#8212; the unique id for this window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as unsigned integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000312" class="method-detail">
+        <a name="M000312"></a>
+
+        <div class="method-heading">
+          <span class="method-name">index<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Window.html#M000312">index</a> property &#8212; the
+number of the window in the front-to-back layer ordering.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000313" class="method-detail">
+        <a name="M000313"></a>
+
+        <div class="method-heading">
+          <span class="method-name">index=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Window.html#M000312">index</a> property &#8212; the
+number of the window in the front-to-back layer ordering.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as integer.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000306" class="method-detail">
+        <a name="M000306"></a>
+
+        <div class="method-heading">
+          <span class="method-name">modal?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the modal property &#8212; is the window <a
+href="Window.html#M000306">modal?</a>
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000302" class="method-detail">
+        <a name="M000302"></a>
+
+        <div class="method-heading">
+          <span class="method-name">name<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Window.html#M000302">name</a> property &#8212; the <a
+href="Window.html#M000302">name</a> of the window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as text.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000316" class="method-detail">
+        <a name="M000316"></a>
+
+        <div class="method-heading">
+          <span class="method-name">position<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Window.html#M000316">position</a> property &#8212; the
+upper left <a href="Window.html#M000316">position</a> of the window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as point.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000317" class="method-detail">
+        <a name="M000317"></a>
+
+        <div class="method-heading">
+          <span class="method-name">position=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Window.html#M000316">position</a> property &#8212; the
+upper left <a href="Window.html#M000316">position</a> of the window.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as point.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000314" class="method-detail">
+        <a name="M000314"></a>
+
+        <div class="method-heading">
+          <span class="method-name">properties<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the <a href="Window.html#M000314">properties</a> property &#8212;
+every property of a window.
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as record.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000315" class="method-detail">
+        <a name="M000315"></a>
+
+        <div class="method-heading">
+          <span class="method-name">properties=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the <a href="Window.html#M000314">properties</a> property &#8212;
+every property of a window.
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as record.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000307" class="method-detail">
+        <a name="M000307"></a>
+
+        <div class="method-heading">
+          <span class="method-name">resizable?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the resizable property &#8212; is the window <a
+href="Window.html#M000307">resizable?</a>
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000305" class="method-detail">
+        <a name="M000305"></a>
+
+        <div class="method-heading">
+          <span class="method-name">titled?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the titled property &#8212; does the window have a title bar?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000300" class="method-detail">
+        <a name="M000300"></a>
+
+        <div class="method-heading">
+          <span class="method-name">visible?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the visible property &#8212; is the window visible (always true for
+open <a href="../Finder.html">Finder</a> windows)?
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000309" class="method-detail">
+        <a name="M000309"></a>
+
+        <div class="method-heading">
+          <span class="method-name">zoomable?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the zoomable property &#8212; is the window <a
+href="Window.html#M000309">zoomable?</a>
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000311" class="method-detail">
+        <a name="M000311"></a>
+
+        <div class="method-heading">
+          <span class="method-name">zoomed=(val)<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Sets the zoomed property &#8212; is the window <a
+href="Window.html#M000310">zoomed?</a>
+</p>
+<table>
+<tr><td valign="top">val:</td><td>The value to be set, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+      <div id="method-M000310" class="method-detail">
+        <a name="M000310"></a>
+
+        <div class="method-heading">
+          <span class="method-name">zoomed?<br />
+</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Gets the zoomed property &#8212; is the window <a
+href="Window.html#M000310">zoomed?</a>
+</p>
+<table>
+<tr><td valign="top">Returns:</td><td>The property value, as boolean.
+
+</td></tr>
+</table>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+RAGI_SERVER = dad.media.mit.edu:4573
+exten => 998,1,Answer()
+exten => 998,2,deadagi(agi://${RAGI_SERVER}/caller_id/identify)
+exten => 998,3,Hangup()
