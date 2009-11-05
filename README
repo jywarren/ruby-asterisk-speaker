@@ -16,6 +16,13 @@ Requires the applescript, ragi, httparty, and geokit gems.
 
 ==TO INSTALL==
 
+First, point your Asterisk system at the server in question. This assumes your Asterisk server is on a different machine. Add the following lines to the default dialplan of your extensions.conf file:
+
+exten = s,n,Set(RAGI_SERVER="your.server.url:4573")
+exten = s,n,agi(agi://${RAGI_SERVER}/ragi/index)
+
+(For more on Asterisk dialplans and Asterisk in general, look at the Asterisk O'Reilly book, free downloadable pdf here: http://downloads.oreilly.com/books/9780596510480.pdf)
+
 Run the following commands:
 
 $ git clone git://github.com/jywarren/ruby-asterisk-speaker.git
