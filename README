@@ -2,7 +2,7 @@
 
 This is a ruby on rails application to connect to an Asterisk instance and create voice menus in rails. An added feature is that if you're running it on a mac os X server you can autogenerate speech from any arbitrary text using the applescript gem and the built in speech abilities of Mac OS X. 
 
-There are a few open source speech generators, but I haven't tried any; this is kind of a proof of concept since not many people run osx server.
+There are a few open source speech generators, but I haven't tried any; this is kind of a proof of concept since not many people run osx server. (Suggestion: Festival via http://github.com/gisikw/acts_as_sayable/)
 
 Generally this builds on RAGI (the ragi gem) but with the added ability to pass an Asteriskspeak.speak_text('hello world') or similar call to the play_sound() method provided by ragi.
 

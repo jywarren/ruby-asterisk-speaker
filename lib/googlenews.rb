@@ -6,9 +6,10 @@ class Googlenews
   base_uri 'news.google.com'
   format :xml
   
-  def self.international(num = 20)
+  # Get articles for all available languages. 
+  # Pass it a # of articles and an array of language codes for which you want articles.
+  def self.international(num = 20,languages = ["es_ar","au","nl_be","fr_be","en_bw","pt-BR_br","ca","fr_ca","cs_cz","es_cl","es_co","es_cu","de","es","es_us","en_et","fr","en_gh","in","en_ie","en_il","it","en_ke","hu_hu","en_my","es_mx","en_na","nl_nl","nz","en_ng","no_no","de_at","en_pk","es_pe","en_ph","pl_pl","pt-PT_pt","de_ch","fr_sn","en_sg","en_za","fr_ch","sv_se","en_tz","tr_tr","uk","us","en_ug","es_ve","vi_vn","en_zw","el_gr"])
     stories = []
-    languages = ["es_ar","au","nl_be","fr_be","en_bw","pt-BR_br","ca","fr_ca","cs_cz","es_cl","es_co","es_cu","de","es","es_us","en_et","fr","en_gh","in","en_ie","en_il","it","en_ke","hu_hu","en_my","es_mx","en_na","nl_nl","nz","en_ng","no_no","de_at","en_pk","es_pe","en_ph","pl_pl","pt-PT_pt","de_ch","fr_sn","en_sg","en_za","fr_ch","sv_se","en_tz","tr_tr","uk","us","en_ug","es_ve","vi_vn","en_zw","el_gr"]
     languages.each do |lang|
       options = { :query => { :num => num, :output => 'rss', :ned => lang } }
       features = self.get('/news', options)
@@ -31,6 +32,7 @@ class Googlenews
     items = features['rss']['channel']['item']
   end
 
+  # Get latest 10 or more articles
   def self.items(num = 10)
     options = { :query => { :num => num, :output => 'rss' } }
     features = self.get('/news', options)
@@ -45,11 +47,13 @@ class Googlenews
     end
   end
   
+  # Extract a topic id from an article object
   def self.extract_topic(item)
     # ncl=duPfj30A5WoxBHMupoOtlciO1jY1M&amp;
     item['description'].match(/ncl=([a-zA-Z0-9]+)&amp;/)[1]
   end
 
+  # Get articles for a topic, given an article object
   def self.topic(item,num = 10)
     options = { :query => { :num => num, :output => 'rss', :ncl => self.extract_topic(item) } }
     features = self.get('/news/more', options)

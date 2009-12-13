@@ -84,8 +84,8 @@ end
 ActiveSupport::Dependencies.mechanism = :require
 # Include your application configuration below
 # Simple server that spawns a new thread for the server
-class SimpleThreadServer < WEBrick::SimpleServer
-# class SimpleThreadServer < Mongrel::HttpHandler
+# class SimpleThreadServer < WEBrick::SimpleServer
+class SimpleThreadServer < Mongrel::HttpHandler
   def SimpleThreadServer.start(&block)
     Thread.new do block.call
     end
